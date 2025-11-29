@@ -44,7 +44,7 @@ The goal of this project is to demonstrate:
 │   ├─ checkoutFixture.ts      # User in Checkout Step 1
 │
 ├─ utils/
-│   ├─ flows.ts                # Reusable business flows (e.g. goToCartWithProducts, goToCheckoutStepOne)
+│   ├─ flows.ts                # Reusable business flows (goToCheckoutStepOne)
 │
 ├─ test-data/
 │   ├─ users.ts                # Login users (standard, locked, etc.)
