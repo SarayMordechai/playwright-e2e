@@ -26,4 +26,9 @@ export class LoginPage {
   async expectLoginSuccess() {
     await expect(this.page.locator('.app_logo')).toHaveText('Swag Labs');
     }
+
+    async expectLoginPageVisible() {
+      await expect(this.page.locator('[data-test="login-button"]')).toBeVisible();
+      await expect(this.page.locator('.login_logo')).toBeVisible();
+    }
 }

@@ -163,6 +163,19 @@ async validateProductCards() {
   
     return { name, price };
   }
-  
+  async logout() {
+    await this.page.locator('#logout_sidebar_link').click();
+  }
+
+  async openMenu() {
+    await this.page.locator('#react-burger-menu-btn').click();
+    const menuPanel = this.page.locator('.bm-item-list');
+    await expect(menuPanel).toBeVisible();
+  }
+  async resetAppState() {
+    await this.openMenu();
+    await this.page.locator('#reset_sidebar_link').click();
+ 
+  }
   
 }

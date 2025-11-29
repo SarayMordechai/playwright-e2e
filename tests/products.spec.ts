@@ -56,6 +56,22 @@ test.describe('Products Page', () => {
   
   });
   
+    test('user can logout successfully and return to login page', async ({productsPage , page }) => {
+      await productsPage.expectProductsLoaded();
+      await productsPage.openMenu();
+      await productsPage.logout();
+      const loginPage = new LoginPage(page);
 
+      await loginPage.expectLoginPageVisible();
+    });
+    
+    test('Reset App State', async ({ page, productsPage }) => {
+    
+      await productsPage.addProductToCartByName(products.backpack);
+      await productsPage.addProductToCartByName(products.bikeLight);
+      await productsPage.expectCartBadgeCount(2);
+      await productsPage.resetAppState();
+      await productsPage.expectCartBadgeCount(0);
+        });
 });
 
