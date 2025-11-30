@@ -55,3 +55,20 @@ The goal of this project is to demonstrate:
 ├─ playwright.config.ts
 ├─ package.json
 └─ README.md
+
+---
+## 🚀 How to Run the Project
+
+Follow these steps to install and execute the Playwright E2E test suite locally.
+
+---
+
+### 📦 1. Clone the Repository
+
+```sh
+git clone https://github.com/SarayMordechai/playwright-e2e.git
+cd playwright-e2e
+npm install
+npx playwright install
+npx playwright test
+npx playwright show-report
